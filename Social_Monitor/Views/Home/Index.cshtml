@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Social_Monitor.Models.SearchResult>
+
+@{
+    ViewBag.Title = "Social Monitor";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Snippet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Query)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Source)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Index)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Link)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Snippet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Query)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Source)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Index)
+        </td>
+    </tr>
+}
+
+</table>
